@@ -1,3 +1,9 @@
+"""
+Hello World in Python OOP
+>>> hello = Hello("Somkiat")
+>>> hello.sayHi()
+'Hello, Somkiat'
+"""
 class Hello:
     def __init__(self, name):
         self.name = name
@@ -6,5 +12,5 @@ class Hello:
         return "Hello, " + self.name
 
 if __name__ == "__main__":
-    hello = Hello("Somkiat")
-    print(hello.sayHi())
+    import doctest
+    doctest.testmod()
