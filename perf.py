@@ -10,7 +10,7 @@ def check_member_in_list(large_list, item):
 # Example usage
 if __name__ == "__main__":
     # Create a large list (list, tuple, set !!)
-    large_list = list(range(10_000_000))  # List of integers from 0 to 999999
+    large_list = set(range(10_000_000))  # List of integers from 0 to 999999
 
     # Check for an item in the list
     item_to_check = 9_999_999
