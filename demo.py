@@ -1,0 +1,11 @@
+names = ["Somkiat", "John", "Jane"]
+names.append("xyz")
+print(names)
+names.pop(0)
+print(names)
+names.pop(0)
+print(names)
+names.pop(0)
+print(names)
+names.pop(0)
+print(names)
