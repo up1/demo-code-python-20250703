@@ -14,19 +14,18 @@ class Game:
         self.table.slots[row][col] = player
         self.table.draw()
 
-    def reset(self):
-        self.table = Table()
-        self.start()
-
+    def check_win(self, player):
+        if all(self.table.slots[0][col] == player for col in range(3)):
+           return True
+        return False
 
 g1 = Game()
 g1.start()
 g1.play(1, "x")
-g1.play(2, "o")
+g1.play(2, "x")
 g1.play(3, "x")
-g1.play(4, "o")
-g1.play(5, "x")
-g1.play(6, "o")
-g1.play(7, "x")
-g1.play(8, "o")
-g1.play(9, "x")
+# X wins
+if g1.check_win("x"):
+    print("X wins")
+else:
+    print("No winner yet")
