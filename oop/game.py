@@ -1,6 +1,5 @@
 from table import Table
 
-
 class Game:
     def __init__(self):
         self.table = Table()
@@ -19,13 +18,13 @@ class Game:
            return True
         return False
 
-g1 = Game()
-g1.start()
-g1.play(1, "x")
-g1.play(2, "x")
-g1.play(3, "x")
-# X wins
-if g1.check_win("x"):
-    print("X wins")
-else:
-    print("No winner yet")
+# g1 = Game()
+# g1.start()
+# g1.play(1, "x")
+# g1.play(2, "x")
+# g1.play(3, "x")
+# # X wins
+# if g1.check_win("x"):
+#     print("X wins")
+# else:
+#     print("No winner yet")

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head><title>Tic Tac Toe</title></head>
+  <body>
+    <h1>{{msg}}</h1>
+    <form action="" method="POST">
+      <table>
+        {% for row in range(0, 3) %}
+        <tr>
+          {% for col in range(0, 3) %}
+          <td>
+            <button type="submit" name="choice" value="{{row*3+col+1}}">
+            {{ slots[row][col] }}
+            </button>
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+      <button type="submit" name="reset">Start Over</button>
+    </form>
+  </body>
+</html>
