@@ -10,7 +10,7 @@
         <tr>
           {% for col in range(0, 3) %}
           <td>
-            <button type="submit" name="choice" value="{{row*3+col+1}}">
+            <button style="width: 100px;height: 100px;font-size: 50px;" type="submit" name="choice" value="{{row*3+col+1}}">
             {{ slots[row][col] }}
             </button>
           </td>
