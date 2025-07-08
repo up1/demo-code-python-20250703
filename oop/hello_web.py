@@ -12,11 +12,14 @@ def startGame():
         # Handle the game logic here
         choice = request.form.get("choice")
         print(f"Player chose: {choice}")
-        app.config['game'].play(int(choice), "x")
+        app.config['game'].play(int(choice))
     if "reset" in request.form:
         app.config['game'] = Game()
         app.config['game'].start()
 
-    return render_template("game.html", msg="Welcome to Tic Tac Toe!", slots=app.config['game'].table.slots)
+    return render_template("hello.html"
+                           , status=app.config['game'].status
+                           , msg="Welcome to Tic Tac Toe!"
+                           , slots=app.config['game'].table.slots)
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
